@@ -6,7 +6,8 @@
 class NameCard
 {
 public:
-    NameCard(const std::string& name, const std::string& phoneNumber, const std::string& address, const std::string& level)
+    NameCard(const std::string& name, const std::string& phoneNumber,
+        const std::string& address, const std::string& level)
         : name(name), phoneNumber(phoneNumber), address(address), level(level)
     {
 
