@@ -146,8 +146,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FireChief.h" />
     <ClInclude Include="Firefighter.h" />
     <ClInclude Include="Firetruck.h" />
+    <ClInclude Include="Hose.h" />
+    <ClInclude Include="Ladder.h" />
     <ClInclude Include="Point.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

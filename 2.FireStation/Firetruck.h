@@ -11,7 +11,7 @@ class Firetruck
 public:
     Firetruck()
     {
-        ladder = new Hose(10.0f);
+        ladder = new Ladder(10.0f);
     }
     ~Firetruck()
     {
@@ -28,7 +28,7 @@ public:
         std::cout << position << " 위치로 소방차 이동 중\n";
     }
     
-    const Hose* GetLadder() const { return ladder; }
+    const Ladder* GetLadder() const { return ladder; }
     const Hose* GetHose() const { return hose; }
     void SetHode(Hose* hose) { this->hose = hose; }
     
@@ -37,6 +37,6 @@ public:
 
 private:
     class Firefighter* driver = nullptr;
-    Hose* ladder = nullptr;
+    Ladder* ladder = nullptr;
     Hose* hose = nullptr;
 };
