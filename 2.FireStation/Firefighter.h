@@ -13,10 +13,10 @@ public:
     {
 
     }
-    ~Firefighter() = default;
+    virtual ~Firefighter() = default;
 
     // 불 끄기.
-    void ExtinguishFire()
+    virtual void ExtinguishFire()
     {
         std::cout << name << " 소방관이 불을 끄고 있음!\n";
     }

@@ -10,12 +10,17 @@ int main()
     Firefighter* palmer = new Firefighter("palmer");
 
     // 소방서장.
-    FireChief* james = new FireChief("james");
+    FireChief* james = new FireChief("james", jackson);
     truckOne->SetDriver(james);
     james->Drive(truckOne, Point(200, 300));
 
-    // 불 끄기 위임
-    james->TellFirefighterToExtinguishFire(jackson);
+    // 불 끄기 위임.
+    //james->TellFirefighterToExtinguishFire(jackson);
+    james->ExtinguishFire();
+
+    // 다형성.
+    Firefighter* stillJames = james; // 복사 생성자 호출.
+    stillJames->ExtinguishFire();
     
     // 운전자 설정.
     truckOne->SetDriver(jackson);
