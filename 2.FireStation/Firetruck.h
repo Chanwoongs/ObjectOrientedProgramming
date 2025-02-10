@@ -4,13 +4,14 @@
 
 #include "Point.h"
 #include "Ladder.h"
+#include "Hose.h"
 
 class Firetruck
 {
 public:
     Firetruck()
     {
-        ladder = new Ladder(10.0f);
+        ladder = new Hose(10.0f);
     }
     ~Firetruck()
     {
@@ -27,12 +28,15 @@ public:
         std::cout << position << " 위치로 소방차 이동 중\n";
     }
     
-    const Ladder* GetLadder() const { return ladder; }
+    const Hose* GetLadder() const { return ladder; }
+    const Hose* GetHose() const { return hose; }
+    void SetHode(Hose* hose) { this->hose = hose; }
     
     class Firefighter* GetDriver() const { return driver; }
     void SetDriver(class Firefighter* driver) { this->driver = driver; }
 
 private:
     class Firefighter* driver = nullptr;
-    Ladder* ladder = nullptr;
+    Hose* ladder = nullptr;
+    Hose* hose = nullptr;
 };
