@@ -146,9 +146,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Administrator.h" />
     <ClInclude Include="FireChief.h" />
     <ClInclude Include="Firefighter.h" />
     <ClInclude Include="FirefighterBase.h" />
+    <ClInclude Include="FireStation.h" />
+    <ClInclude Include="INamedPerson.h" />
     <ClInclude Include="TraineeFirefighter.h" />
     <ClInclude Include="Firetruck.h" />
     <ClInclude Include="Hose.h" />

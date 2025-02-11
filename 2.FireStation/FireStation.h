@@ -1,17 +1,21 @@
 ﻿#pragma once
 
+#include <iostream>
 #include <vector>
+
+#include "INamedPerson.h"
+#include "FirefighterBase.h"
 
 class FireStation
 {
 public:
     // 출근 함수.
-    void ClockIn(void* staffMember)
+    void ClockIn(INamedPerson* staffMember)
     {
         // 이미 출근했는지 확인.
         bool contains = false;
 
-        for (void* staff : clockedInStaff)
+        for (INamedPerson* staff : clockedInStaff)
         {
             if (staff == staffMember)
             {
@@ -30,13 +34,13 @@ public:
     // 출석 확인 함수.
     void RollCall()
     {
-        for (void* staff : clockedInStaff)
+        for (INamedPerson* staff : clockedInStaff)
         {
-            // std::cout << staff->???
+            std::cout << staff->GetName() << '\n';
         }
     }
 
 private:
     // 직원 관리 변수.
-    std::vector<void*> clockedInStaff;
+    std::vector<INamedPerson*> clockedInStaff;
 };
