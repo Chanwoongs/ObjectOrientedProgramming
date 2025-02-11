@@ -40,15 +40,15 @@ public:
     void SetName(const std::string& name) { this->name = name; }
 
     // 맴버 함수(메소드).
-private:
+protected:
     // 호스 켜기
-    void TurnOnHose()
+    virtual void TurnOnHose()
     {
         std::cout << "불이 꺼지고 있습니다.\n";
     }
 
     // 호스 조준
-    void TrainHoseOnFire()
+    virtual void TrainHoseOnFire()
     {
         std::cout << "호스를 불이 발생한 곳에 겨냥하고 있습니다.\n";
     }

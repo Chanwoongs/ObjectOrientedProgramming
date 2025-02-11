@@ -2,12 +2,17 @@
 
 #include "Firefighter.h"
 #include "FireChief.h"
+#include "TraineeFirefighter.h"
 
 int main()
 {
     Firetruck* truckOne = new Firetruck();
     Firefighter* jackson = new Firefighter("jackson");
     Firefighter* palmer = new Firefighter("palmer");
+
+    // 수습 소방관 생성 및 테스트.
+    Firefighter* neto = new TraineeFighetfighter("neto");
+    neto->ExtinguishFire();
 
     // 소방서장.
     FireChief* james = new FireChief("james", jackson);
