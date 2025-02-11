@@ -18,7 +18,8 @@ protected:
     {
         if (hoseTrainedOnFire)
         {
-            std::cout << "불이 꺼지고 있습니다.\n";
+            Firefighter::TurnOnHose();
+            //std::cout << "불이 꺼지고 있습니다.\n";
         }
         else
         {
@@ -30,7 +31,8 @@ protected:
     virtual void TrainHoseOnFire() override
     {
         hoseTrainedOnFire = true;
-        std::cout << "호스를 불이 발생한 곳에 겨냥하고 있습니다.\n";
+        Firefighter::TrainHoseOnFire();
+        //std::cout << "호스를 불이 발생한 곳에 겨냥하고 있습니다.\n";
     }
 
 private:
