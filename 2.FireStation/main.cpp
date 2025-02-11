@@ -4,9 +4,17 @@
 #include "Firefighter.h"
 #include "FireChief.h"
 #include "TraineeFirefighter.h"
+#include "FireStation.h"
+#include "Administrator.h"
 
 int main()
 {
+    // 소방서 생성.
+    FireStation* fireStation = new FireStation();
+
+    // 관리자 생성.
+    Administrator* mareska = new Administrator("Manager", "Enzo", "Mareska");
+
     Firetruck* truckOne = new Firetruck();
     Firefighter* jackson = new Firefighter("jackson");
     Firefighter* palmer = new Firefighter("palmer");
@@ -19,6 +27,16 @@ int main()
     FireChief* james = new FireChief("james", jackson);
     truckOne->SetDriver(james);
     james->Drive(truckOne, Point(200, 300));
+
+    // 출근.
+    fireStation->ClockIn(mareska);
+    fireStation->ClockIn(jackson);
+    fireStation->ClockIn(palmer);
+    fireStation->ClockIn(neto);
+    fireStation->ClockIn(james);
+
+    // 이름 확인.
+    fireStation->RollCall();
 
     // 불 끄기 위임.
     //james->TellFirefighterToExtinguishFire(jackson);
@@ -48,4 +66,8 @@ int main()
     delete palmer;
     delete neto;
     delete james;
+
+    delete fireStation;
+    delete mareska;
+
 };
