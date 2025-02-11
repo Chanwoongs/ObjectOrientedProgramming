@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="FireChief.h" />
     <ClInclude Include="Firefighter.h" />
+    <ClInclude Include="FirefighterBase.h" />
     <ClInclude Include="TraineeFirefighter.h" />
     <ClInclude Include="Firetruck.h" />
     <ClInclude Include="Hose.h" />

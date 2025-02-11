@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 
+#include "FirefighterBase.h"
 #include "Firefighter.h"
 #include "FireChief.h"
 #include "TraineeFirefighter.h"
@@ -24,7 +25,7 @@ int main()
     james->ExtinguishFire();
 
     // 다형성.
-    Firefighter* stillJames = james; // 복사 생성자 호출.
+    FirefighterBase* stillJames = james; // 복사 생성자 호출.
     stillJames->ExtinguishFire();
     
     // 운전자 설정.
@@ -41,4 +42,10 @@ int main()
 
     // 소방차 이동.
     palmer->Drive(truckOne, Point(200, 111));
+
+    delete truckOne;
+    delete jackson;
+    delete palmer;
+    delete neto;
+    delete james;
 };

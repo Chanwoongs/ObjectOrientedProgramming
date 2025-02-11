@@ -6,6 +6,10 @@
 #include "Ladder.h"
 #include "Hose.h"
 
+// 전방 선언(Forward Declaration). 쓰는 이유: 헤더 순환 참조 방지, 컴파일 속도 개선.
+// 전방 선언은 포인터, 레퍼런스에만 가능하다. 이유: 포인터는 주소의 크기를 몰라도 가능하기 때문에 가능하다. 타입에 상관없다.
+class FirefighterBase;
+
 class Firetruck
 {
 public:
@@ -32,11 +36,11 @@ public:
     const Hose* GetHose() const { return hose; }
     void SetHode(Hose* hose) { this->hose = hose; }
     
-    class Firefighter* GetDriver() const { return driver; }
-    void SetDriver(class Firefighter* driver) { this->driver = driver; }
+    FirefighterBase* GetDriver() const { return driver; }
+    void SetDriver(FirefighterBase* driver) { this->driver = driver; }
 
 private:
-    class Firefighter* driver = nullptr;
+    FirefighterBase* driver = nullptr;
     Ladder* ladder = nullptr;
     Hose* hose = nullptr;
 };
