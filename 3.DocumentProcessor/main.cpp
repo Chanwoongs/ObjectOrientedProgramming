@@ -10,9 +10,13 @@
 DocumentProcessor* Configure()
 {
     DocumentProcessor* processor = new DocumentProcessor();
-    processor->GetProcesses().emplace_back(new TranslateIntoFrenchProcess());
-    processor->GetProcesses().emplace_back(new SpellcheckProcess());
-    processor->GetProcesses().emplace_back(new RepaginateProcess());
+    //processor->GetProcesses().emplace_back(new TranslateIntoFrenchProcess());
+    //processor->GetProcesses().emplace_back(new SpellcheckProcess());
+    //processor->GetProcesses().emplace_back(new RepaginateProcess());
+
+    processor->AddDocumentProcess(DocumentProcess::TranslateIntoFrench);
+    processor->AddDocumentProcess(DocumentProcess::Repaginate);
+    processor->AddDocumentProcess(DocumentProcess::SpellCheck);
 
     return processor;
 }
@@ -30,7 +34,7 @@ int main()
     std::cout << "문서1 처리\n";
     processor->Process(doc1);
     std::cout << '\n';
-
+    
     std::cout << "문서2 처리\n";
     processor->Process(doc2);
     std::cout << '\n';
