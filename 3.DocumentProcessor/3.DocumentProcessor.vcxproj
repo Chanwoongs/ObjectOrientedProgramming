@@ -149,6 +149,10 @@
     <ClInclude Include="Document.h" />
     <ClInclude Include="DocumentProcess.h" />
     <ClInclude Include="DocumentProcessor.h" />
+    <ClInclude Include="IDocumentProcess.h" />
+    <ClInclude Include="RepaginateProcess.h" />
+    <ClInclude Include="SpellCheckProcess.h" />
+    <ClInclude Include="TranslateIntoFrenchProcess.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

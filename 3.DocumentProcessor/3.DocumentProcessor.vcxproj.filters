@@ -29,5 +29,17 @@
     <ClInclude Include="DocumentProcessor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="IDocumentProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SpellCheckProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RepaginateProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TranslateIntoFrenchProcess.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
